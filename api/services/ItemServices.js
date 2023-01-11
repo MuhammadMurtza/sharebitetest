@@ -15,7 +15,7 @@ const get = () => {
 const getById = data => {
   return new Promise(async (resolve, reject) => {
     try {
-      const queryString = 'Select * from items  WHERE id= ?';
+      const queryString = 'Select * from items+  WHERE id= ?';
       const result = await dbConnection.query(queryString, [data.id]);
       return resolve(result[0]);
     } catch (error) {
