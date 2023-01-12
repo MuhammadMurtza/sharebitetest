@@ -40,4 +40,4 @@ const create = data => {
   });
 };
 
-module.exports = { get,create };
+module.exports = { get, create };

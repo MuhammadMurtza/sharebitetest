@@ -11,12 +11,12 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       section_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: 'sections',key:'id' }
+        references: { model: 'sections', key: 'id' }
       },
       description: {
         type: Sequelize.STRING

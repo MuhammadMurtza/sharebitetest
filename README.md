@@ -1,19 +1,15 @@
-
 # Sharebit
 
 Menu Builder Application.
 
 ## Tech Stack
 
-
 **Server:** Node, Express, MYSQL
 
 ### Pre-requisites:
+
 node-js: 18.13.0 (lts version)
 mysql
-
-
-
 
 ## Run Locally
 
@@ -35,7 +31,6 @@ mysql
   npm install
 ```
 
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -52,12 +47,12 @@ To run this project, you will need to add the following environment variables to
 
 `DB_PORT`
 
-
 #### Migrate databse and seed data
 
 ```bash
   npm run  migrate:up
 ```
+
 then
 
 ```bash
@@ -69,9 +64,6 @@ then
 ```bash
   npm start
 ```
-
-
-
 
 ## API Reference
 
@@ -104,6 +96,3 @@ then
 ```http
   /api/v1/menu
 ```
-
-
-
