@@ -1,6 +1,5 @@
 const { get, create } = require('../services/ItemModifierServices');
-const AppError = require('../../utils/AppError');
-const catchAsync = require('../../utils/catchAsync');
+const { AppError, catchAsync } = require('../../utils');
 
 const getItemsModifiers = catchAsync(async (req, res, next) => {
   const result = await get();
@@ -25,6 +24,6 @@ const mapItemsModifiers = catchAsync(async (req, res, next) => {
 });
 
 module.exports = {
-    getItemsModifiers,
+  getItemsModifiers,
   mapItemsModifiers
 };

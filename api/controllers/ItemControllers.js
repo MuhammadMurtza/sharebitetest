@@ -1,8 +1,6 @@
 const { get, getById, create, update, remove } = require('../services/ItemServices');
-const sectionServices = require('../services/SectionServices');
 
-const AppError = require('../../utils/AppError');
-const catchAsync = require('../../utils/catchAsync');
+const { AppError, catchAsync } = require('../../utils');
 
 const getAllItems = catchAsync(async (req, res, next) => {
   const result = await get();
@@ -31,7 +29,7 @@ const createItems = catchAsync(async (req, res, next) => {
     return next(new AppError('Section_id field cannot be empty', 400));
   } else {
     const result = await create(req.body);
-    return res.status(201).json({message: "Item added successfully" });
+    return res.status(201).json({ message: 'Item added successfully' });
   }
 });
 
@@ -51,7 +49,7 @@ const updateItems = catchAsync(async (req, res, next) => {
   } else {
     const data = { ...req.body, id: req.params.id };
     const result = await create(data);
-    return res.status(201).json({message: "Item updated successfully" });
+    return res.status(201).json({ message: 'Item updated successfully' });
   }
 });
 
@@ -61,7 +59,7 @@ const deleteItems = catchAsync(async (req, res, next) => {
     return next(new AppError(`Item with id=${req.params.id} does not exist`, 404));
   }
   const result = await remove(req.params);
-  return res.status(200).json({message: "Item deleted successfully" });
+  return res.status(200).json({ message: 'Item deleted successfully' });
 });
 
 module.exports = {

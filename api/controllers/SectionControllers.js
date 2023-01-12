@@ -1,6 +1,5 @@
 const sectionServices = require('../services/SectionServices');
-const AppError = require('../../utils/AppError');
-const catchAsync = require('../../utils/catchAsync');
+const { AppError, catchAsync } = require('../../utils');
 
 const getAllSections = catchAsync(async (req, res, next) => {
   const result = await sectionServices.get();
@@ -25,7 +24,7 @@ const createSection = catchAsync(async (req, res, next) => {
     return next(new AppError('Description field cannot be empty', 400));
   }
   const result = await sectionServices.create(req.body);
-  return res.status(201).json({ message: "Section added successfully" });
+  return res.status(201).json({ message: 'Section added successfully' });
 });
 
 const updateSection = catchAsync(async (req, res, next) => {
@@ -41,7 +40,7 @@ const updateSection = catchAsync(async (req, res, next) => {
   }
   const data = { ...req.body, id: req.params.id };
   const result = await sectionServices.update(data);
-  return res.status(200).json({message: "Section updated successfully" });
+  return res.status(200).json({ message: 'Section updated successfully' });
 });
 
 const deleteSection = catchAsync(async (req, res, next) => {
@@ -50,7 +49,7 @@ const deleteSection = catchAsync(async (req, res, next) => {
     return next(new AppError(`Section with id=${req.params.id} does not exist`, 404));
   }
   const result = await sectionServices.remove(req.params);
-  return res.status(200).json({ message: "Section deleted successfully" });
+  return res.status(200).json({ message: 'Section deleted successfully' });
 });
 
 module.exports = {

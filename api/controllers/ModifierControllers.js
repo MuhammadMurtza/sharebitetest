@@ -22,7 +22,7 @@ const createModifier = catchAsync(async (req, res, next) => {
     return next(new AppError('Description field cannot be empty', 400));
   }
   const result = await modifierServices.create(req.body);
-  return res.status(201).json({message: "Modifier added successfully" });
+  return res.status(201).json({ message: 'Modifier added successfully' });
 });
 
 const updateModifier = catchAsync(async (req, res, next) => {
@@ -36,7 +36,7 @@ const updateModifier = catchAsync(async (req, res, next) => {
   }
   const data = { ...req.body, id: req.params.id };
   const result = await modifierServices.update(data);
-  return res.status(200).json({ message: "Modifier updated successfully"});
+  return res.status(200).json({ message: 'Modifier updated successfully' });
 });
 
 const deleteModifier = catchAsync(async (req, res, next) => {
@@ -45,7 +45,7 @@ const deleteModifier = catchAsync(async (req, res, next) => {
     return next(new AppError(`Modifier with id=${req.params.id} does not exist`, 404));
   }
   const result = await modifierServices.remove(req.params);
-  return res.status(200).json({message: "Modifier deleted successfully" });
+  return res.status(200).json({ message: 'Modifier deleted successfully' });
 });
 
 module.exports = {

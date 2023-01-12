@@ -1,6 +1,5 @@
 const menuServices = require('../services/MenuServices');
-const AppError = require('../../utils/AppError');
-const catchAsync = require('../../utils/catchAsync');
+const { AppError, catchAsync } = require('../../utils');
 
 const getEntireMenu = catchAsync(async (req, res, next) => {
   const result = await menuServices.get();
