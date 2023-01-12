@@ -66,7 +66,37 @@ To run this project, you will need to add the following environment variables to
 
 
 
+## API Reference
 
+#### Sections
+
+```http
+   /api/v1/sections
+```
+
+#### Items
+
+```http
+   /api/v1/items
+```
+
+#### Modifiers
+
+```http
+   /api/v1/modifiers
+```
+
+#### Map Items and modifiers
+
+```http
+   /api/v1/items-modifiers
+```
+
+#### Get Entire Menu
+
+```http
+  /api/v1/menu
+```
 
 
 
