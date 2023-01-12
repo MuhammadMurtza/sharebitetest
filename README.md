@@ -46,7 +46,7 @@ and then run
 Start the server
 
 ```bash
-  npm run start
+  npm start
 ```
 
 
