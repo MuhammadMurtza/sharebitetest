@@ -35,20 +35,6 @@ mysql
   npm install
 ```
 
-#### Migrate databse
-
-Create a database with name: "sharebite"
-and then run
-```bash
-  npm run  migrate:up
-```
-
-Start the server
-
-```bash
-  npm start
-```
-
 
 ## Environment Variables
 
@@ -63,6 +49,27 @@ To run this project, you will need to add the following environment variables to
 `DB_PASSWORD`
 
 `DB_NAME`
+
+`DB_PORT`
+
+
+#### Migrate databse and seed data
+
+```bash
+  npm run  migrate:up
+```
+then
+
+```bash
+  npm run  seed:up
+```
+
+#### Start the server
+
+```bash
+  npm start
+```
+
 
 
 
