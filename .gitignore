@@ -2,5 +2,5 @@
 .env
 .prettierrc
 .eslint.json
-.package-lock.json
+package-lock.json
 
